@@ -1,0 +1,90 @@
+@font-face {
+  font-family: Lobster;
+  src: url(fonty/Lobster-Regular.ttf)
+}
+
+body {
+  margin: auto;
+  width: 400px;
+  background: linear-gradient(to bottom, #615dad, #ffc8da);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.img {
+  width: 400px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  color: #ffffff;
+  background-color: #283e50;
+  font-family: sans-serif;
+  line-height: 1.5rem;
+  padding-bottom: 50px;
+}
+
+.card__text {
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 1.1rem;
+}
+
+.card__title {
+  padding-top: 20px;
+  font-family: "Lobster";
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+.button1,
+.button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 20px;
+  border-style: none;
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.button1 {
+  background-color: #1fcca4;
+  border-bottom: 1px solid black;
+}
+
+.button2 {
+  background-color: #0197f6;
+}
+
+.button1:hover {
+  background-color: #1cbb96;
+}
+
+.button2:hover {
+  background-color: #0090e9;
+}
