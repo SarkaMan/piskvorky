@@ -4,12 +4,13 @@
 }
 
 body {
-  margin: auto;
-  width: 400px;
   background: linear-gradient(to bottom, #615dad, #ffc8da);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  justify-content: center;
+  display: flex;
+  margin: auto;
 }
 
 .card {
@@ -81,10 +82,102 @@ body {
   background-color: #0197f6;
 }
 
-.button1:hover {
+.button1:hover,
+.button__home:hover,
+.button1:focus,
+.button__home:focus {
   background-color: #1cbb96;
 }
 
-.button2:hover {
+.button2:hover,
+.button__restart:hover,
+.button2:focus,
+.button__restart:focus {
   background-color: #0090e9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 80vmin;
+}
+
+.container__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.container__icons {
+  display: flex;
+  order: 2;
+  margin-top: 20px;
+}
+
+.container__player {
+  display: flex;
+}
+
+.title__game {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: "Lobster";
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.button__home {
+  background-color: #1fcca4;
+}
+
+.button__restart {
+  background-color: #0197f6;
+  margin-left: 10px;
+}
+
+.button__home,
+.button__restart {
+  width: 30px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.img__circle {
+  order: 2;
+  width: 20%;
+  margin-left: 15px;
+}
+
+.player {
+  order: 1;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  width: 70%;
+}
+
+.board__container {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px black;
+  width: 500px;
+  justify-content: center;
+}
+
+.board__button {
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+  background-color: rgb(219, 182, 222);
+  cursor: pointer;
+}
+
+.board__button:hover,
+.board__button:focus {
+  background-color: rgb(227, 200, 228);
 }
