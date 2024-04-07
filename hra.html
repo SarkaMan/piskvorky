@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piškvorky</title>
     <link rel="stylesheet" href="styly.css" />
+    <script src="hra.js" type="module"></script>
   </head>
   <body>
     <div class="container">
@@ -20,12 +21,11 @@
               src="restart.svg"
               alt="button restart"
             />
-            <!-- <img class="img__cross" src="cross.svg" alt="cross" /> -->
           </a>
         </div>
         <div class="container__player">
           <p class="player"><strong>HRAJE:</strong></p>
-          <img class="img__circle" src="circle.svg" alt="circle" />
+          <img id="current__player" src="circle.svg" alt="circle" />
         </div>
       </div>
       <div class="board__container">
