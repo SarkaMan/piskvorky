@@ -185,51 +185,28 @@ body {
 /* Styly pro 1.řádek tabulky */
 
 .board__field--circle {
-  position: relative;
-}
-
-.board__field--circle::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(circle.svg);
+  background-image: url(circle-black.svg);
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
-  filter: invert(100%);
-  font-size: 24px;
-  animation: enlarge 0.15s linear;
+  animation: zoomIn 0.15s;
 }
 
 .board__field--cross {
-  position: relative;
-}
-
-.board__field--cross::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(cross.svg);
+  background-image: url(cross-black.svg);
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
-  filter: invert(100%);
-  font-size: 24px;
-  animation: enlarge 0.15s linear;
+  animation: zoomIn 0.15s;
 }
 
-@keyframes enlarge {
+/* animace */
+@keyframes zoomIn {
   0% {
-    transform: scale(1);
+    transform: scale(0.2);
   }
 
   100% {
-    transform: scale(1.5);
+    transform: scale(1);
   }
 }
