@@ -3,19 +3,23 @@ import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 let currentPlayer = 'circle';
 const allButtons = document.querySelectorAll('.board__button');
 
-//Funkce apiPlayer ziskava aktualni stav hraci desky, ktery odesila na API a vraci tah AI
-const apiPlayer = async (player) => {
-  const playingBoard = [];
-
+const createArray = () => {
+  const array = [];
   allButtons.forEach((button) => {
     if (button.classList.contains('board__field--circle')) {
-      playingBoard.push('o');
+      array.push('o');
     } else if (button.classList.contains('board__field--cross')) {
-      playingBoard.push('x');
+      array.push('x');
     } else {
-      playingBoard.push('_');
+      array.push('_');
     }
   });
+  return array;
+};
+
+//Funkce apiPlayer ziskava aktualni stav hraci desky, ktery odesila na API a vraci tah AI
+const apiPlayer = async (player) => {
+  const playingBoard = createArray();
 
   //Odeslani pozadavku fetch
   const response = await fetch(
@@ -61,21 +65,6 @@ allButtons.forEach((button) => {
   button.addEventListener('click', selectButton);
 });
 
-//Vytvoreni pole
-const createArray = () => {
-  const array = [];
-  allButtons.forEach((button) => {
-    if (button.classList.contains('board__field--circle')) {
-      array.push('o');
-    } else if (button.classList.contains('board__field--cross')) {
-      array.push('x');
-    } else {
-      array.push('_');
-    }
-  });
-  return array;
-};
-
 //Urceni viteze hry a nastaveni casovace
 const result = () => {
   const array = createArray();
@@ -85,14 +74,14 @@ const result = () => {
     setTimeout(() => {
       alert(`Vítězem je hráč se symbolem ${winner}.`);
       location.reload();
-    }, 1000);
+    }, 500);
   }
 
   if (winner === 'tie') {
     setTimeout(() => {
       alert(`Hra skončila remízou.`);
       location.reload();
-    }, 1000);
+    }, 500);
   }
 };
 
